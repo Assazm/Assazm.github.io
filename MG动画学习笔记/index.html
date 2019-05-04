@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="ctrl+shift+h 隐藏/显示变换控件  创建形状图层时，使用矩形工具创建描边和填充，可以选择描边和填充的层级   扩大描边半径时，描边会同时向内和向外扩大；如果将填充至于描边之上，那么填充将盖住描边，此时再扩大描边半径，则只会向外扩大">
+<meta name="keywords" content="MG,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MG动画学习笔记">
+<meta property="og:url" content="https://wensky.xyz/MG动画学习笔记/index.html">
+<meta property="og:site_name" content="致清的小屋">
+<meta property="og:description" content="ctrl+shift+h 隐藏/显示变换控件  创建形状图层时，使用矩形工具创建描边和填充，可以选择描边和填充的层级   扩大描边半径时，描边会同时向内和向外扩大；如果将填充至于描边之上，那么填充将盖住描边，此时再扩大描边半径，则只会向外扩大">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://assazm.binmt.cc/068ff5f2983ceb3625dad1fa3150fb3a.png">
+<meta property="og:updated_time" content="2019-04-25T13:07:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MG动画学习笔记">
+<meta name="twitter:description" content="ctrl+shift+h 隐藏/显示变换控件  创建形状图层时，使用矩形工具创建描边和填充，可以选择描边和填充的层级   扩大描边半径时，描边会同时向内和向外扩大；如果将填充至于描边之上，那么填充将盖住描边，此时再扩大描边半径，则只会向外扩大">
+<meta name="twitter:image" content="http://assazm.binmt.cc/068ff5f2983ceb3625dad1fa3150fb3a.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://wensky.xyz/MG动画学习笔记/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>MG动画学习笔记 | 致清的小屋</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6dca9ba34bf2102be3984c00f96c7c84";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">致清的小屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">一个爱好者的成长日志</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://wensky.xyz/MG动画学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="致清">
+      <meta itemprop="description" content="我就是随便写写">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="致清的小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MG动画学习笔记
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-23 11:24:04" itemprop="dateCreated datePublished" datetime="2019-04-23T11:24:04+08:00">2019-04-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-25 21:07:16" itemprop="dateModified" datetime="2019-04-25T21:07:16+08:00">2019-04-25</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/MG动画学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="MG动画学习笔记/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ctrl+shift+h 隐藏/显示变换控件</p>
+<ul>
+<li>创建形状图层时，使用矩形工具创建描边和填充，可以选择描边和填充的层级<br>   扩大描边半径时，描边会同时向内和向外扩大；如果将填充至于描边之上，那么填充将盖住描边，此时再扩大描边半径，则只会向外扩大<a id="more"></a>
+<ul>
+<li>line cap(线段连接)：决定线段其起始和结尾的类型</li>
+<li>line join（线段连接）：决定线段拐角处的链接方式</li>
+<li>miter linmit（尖角限制）：通过调整数值来决定拐角处是否出现尖角；按ctrl进行拖动是以0.1为单位</li>
+<li>dashes(虚线)：将描边转换为虚线效果，需要点击+号才能添加属性</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>填充和描边渲染的顺序是由内而外的，如果形状本身有填充或描边，那么添加在它上一层级上的填充将没有效果，添加描边的话必须要超过形状原始描边的半径才会显现出来</p>
+</li>
+<li><p>点击contents（内容）后面的add（添加）可以创建组，可以将同类元素放到一个组里，这样添加描边或填充时会方便一点</p>
+</li>
+</ul>
+<h5 id="合并路径"><a href="#合并路径" class="headerlink" title="合并路径"></a>合并路径</h5><ul>
+<li>对形状图层里面的子图层，可以点击内容后面add添加merge path(合并路径)（必须是内容后面的add），然后会新生成填充和描边，强制统一填充和描边</li>
+<li>merge path(合并路径)必须放在两个形状图层之后，放在其他地方都是不能生效的</li>
+</ul>
+<h5 id="offset-path-位移路径"><a href="#offset-path-位移路径" class="headerlink" title="offset path(位移路径)"></a>offset path(位移路径)</h5><ul>
+<li>根据数值将当前形状图层进行扩大或缩小（变换控件/锚点位置不变）</li>
+</ul>
+<h5 id="repeater-中继器"><a href="#repeater-中继器" class="headerlink" title="repeater(中继器)"></a>repeater(中继器)</h5><ul>
+<li>类似C4D中的克隆</li>
+<li>添加中继器时不能直接点击contents（内容）后面的add（添加），这样创建的中继器是和子形状图层是同级的，对中继器进行位置、旋转、缩放时会以上一层级的形状图层的锚点位置作为中心；</li>
+<li>必须是选中需要添加中继器的图层然后再点击add进行添加，此时创建的中继器是该图层的子物体，这样的位置坐标才是正确的</li>
+<li>在使用中继器时最好使用矩形工具创建形状图层，这样才方便移动矩形路径自身的锚点和中继器旋转中心</li>
+<li><strong>当形状路径使用中继器之后不能修改路径形状，否则就会造成异常显示，一句话来说就是如果要使用中继器，那创建形状图层必须一步到位</strong></li>
+<li><p>通过<strong>变换：中继器</strong>下的锚点来控制中继器对象的旋转中心，默认是（0，0）</p>
+</li>
+<li><p>圆角：添加后对形状图层的顶点进行圆滑处理</p>
+</li>
+<li>修剪路径：对路径的开始和结束进行K帧动画</li>
+<li>抖动路径：类似于网易云音乐圆圈效果，就像是给形状图层添加了一个动态噪波效果，可以根据大小数值调节幅度</li>
+<li><ul>
+<li>此路径操作的多个属性的行为与用于文本动画的摆动选择器的同名属性的行为相同</li>
+</ul>
+</li>
+<li><ul>
+<li>“关联”属性指定顶点的运动与其邻点的运动之间的相似程度；值越小，锯齿效果越明显，因为顶点的位置对其邻点位置的依赖程度更小。</li>
+</ul>
+</li>
+</ul>
+<p>-摆动变换</p>
+<ul>
+<li><ul>
+<li>随机分布（摆动）路径的位置、锚点、缩放和旋转变换的任意组合。</li>
+</ul>
+</li>
+<li><ul>
+<li>摆动变换”操作在中继器操作之后尤其有用，因为它允许您单独随机分布每个重复的形状的变换</li>
+</ul>
+</li>
+<li><p>Z字形：使形状图层的路径生成像折线锯子一样的折现</p>
+</li>
+<li><p>通过圆角矩形创建形状时，可以通过鼠标滚轮进行圆角半径调整</p>
+</li>
+<li>AE中的形状图层本身不像PS中的一样可以直接变形，如果要实现变形效果，则需要点击contents&gt;rectangle&gt;rectangle path 1，然后右键转换为贝塞尔曲线</li>
+</ul>
+<hr>
+<h5 id="填充与描边"><a href="#填充与描边" class="headerlink" title="填充与描边"></a>填充与描边</h5><ul>
+<li>形状图层本身可以设置填充与描边</li>
+<li><p>一级形状图层不设置描边与填充，那么内容里面的其他形状图层也不能设置填充与描边</p>
+</li>
+<li><p>修改线段圆角时首先尝试线段端点，如果线段端点没有用的话那就尝试线段链接</p>
+</li>
+<li>渐变填充会腐蚀部分描边，从而使描边半径减小</li>
+<li>如果使用钢笔工具创建路径，那么就会生成一个新的形状图层；如果使用多边形工具进行创建，那么可以在选中的层级下生成，而不会生成新的图层。</li>
+</ul>
+<h3 id="让MG动画更加好看的技巧"><a href="#让MG动画更加好看的技巧" class="headerlink" title="让MG动画更加好看的技巧"></a>让MG动画更加好看的技巧</h3><ol>
+<li>调整速度</li>
+<li>弹性&amp;拖尾</li>
+<li>运动模糊</li>
+<li>层次感</li>
+<li>点缀元素</li>
+</ol>
+<h3 id="使用脚本表达式制作Mg动画bounce和overshoot效果"><a href="#使用脚本表达式制作Mg动画bounce和overshoot效果" class="headerlink" title="使用脚本表达式制作Mg动画bounce和overshoot效果"></a>使用脚本表达式制作Mg动画bounce和overshoot效果</h3><pre><code>Bounce（弹跳）
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">e = 0.7; 	%弹跳衰减值</span><br><span class="line">g = 5000; 	%重力系数</span><br><span class="line">nMax = 9; 	%弹跳次数</span><br><span class="line">n = 0;</span><br><span class="line">if (numKeys &gt; 0)&#123;</span><br><span class="line">  n = nearestKey(time).index;</span><br><span class="line">  if (key(n).time &gt; time) n--;</span><br><span class="line">&#125;</span><br><span class="line">if (n &gt; 0)&#123;</span><br><span class="line">  t = time - key(n).time;</span><br><span class="line">  v = -velocityAtTime(key(n).time - .001)*e;</span><br><span class="line">  vl = length(v);</span><br><span class="line">  if (value instanceof Array)&#123;</span><br><span class="line">    vu = (vl &gt; 0) ? normalize(v) : [0,0,0];</span><br><span class="line">  &#125;else&#123;</span><br><span class="line">    vu = (v &lt; 0) ? -1 : 1;</span><br><span class="line">  &#125;</span><br><span class="line">  tCur = 0;</span><br><span class="line">  segDur = 2*vl/g;</span><br><span class="line">  tNext = segDur;</span><br><span class="line">  nb = 1; // number of bounces</span><br><span class="line">  while (tNext &lt; t &amp;&amp; nb &lt;= nMax)&#123;</span><br><span class="line">    vl *= e;</span><br><span class="line">    segDur *= e;</span><br><span class="line">    tCur = tNext;</span><br><span class="line">    tNext += segDur;</span><br><span class="line">    nb++</span><br><span class="line">  &#125;</span><br><span class="line">  if(nb &lt;= nMax)&#123;</span><br><span class="line">    delta = t - tCur;</span><br><span class="line">    value +  vu*delta*(vl - g*delta/2);</span><br><span class="line">  &#125;else&#123;</span><br><span class="line">    value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;else  value</span><br></pre></td></tr></table></figure>
+<pre><code>Overshoot
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">freq = 3;	%频率</span><br><span class="line">decay = 5;	%衰减值</span><br><span class="line">n = 0;</span><br><span class="line">if (numKeys &gt; 0)&#123;</span><br><span class="line">  n = nearestKey(time).index;</span><br><span class="line">  if (key(n).time &gt; time) n--;</span><br><span class="line">&#125;</span><br><span class="line">if (n &gt; 0)&#123;</span><br><span class="line">  t = time - key(n).time;</span><br><span class="line">  amp = velocityAtTime(key(n).time - .001);</span><br><span class="line">  w = freq*Math.PI*2;</span><br><span class="line">  value + amp*(Math.sin(t*w)/Math.exp(decay*t)/w);</span><br><span class="line">&#125;else</span><br><span class="line">  value</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用脚本创建动画时需要关键帧为默认关键帧，即为匀速关键帧</li>
+<li>如果将关键帧类型转换为缓动，那么表达式创建的效果则不能生效，此时则需要打开图标编辑器，并且打开表达式图层，调整出点的速度使表达式图像出现<br><img src="http://assazm.binmt.cc/068ff5f2983ceb3625dad1fa3150fb3a.png" alt></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/uploads/wechat.JPG" alt="致清 wechat" style="width: 200px; max-width: 100%;">
+  <div>微信扫描二维码，和我一起探讨学习！</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MG/" rel="tag"># MG</a>
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hexo-next主题个性化设置/" rel="next" title="hexo+next主题个性化设置">
+                <i class="fa fa-chevron-left"></i> hexo+next主题个性化设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/练习0423/" rel="prev" title="练习0423">
+                练习0423 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="致清">
+            
+              <p class="site-author-name" itemprop="name">致清</p>
+              <div class="site-description motion-element" itemprop="description">我就是随便写写</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/Assazm" title="GitHub &rarr; https://github.com/Assazm" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:wenjp2016@qq.com" title="E-Mail &rarr; mailto:wenjp2016@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#合并路径"><span class="nav-number">1.</span> <span class="nav-text">合并路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#offset-path-位移路径"><span class="nav-number">2.</span> <span class="nav-text">offset path(位移路径)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#repeater-中继器"><span class="nav-number">3.</span> <span class="nav-text">repeater(中继器)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#填充与描边"><span class="nav-number">4.</span> <span class="nav-text">填充与描边</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#让MG动画更加好看的技巧"><span class="nav-number"></span> <span class="nav-text">让MG动画更加好看的技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用脚本表达式制作Mg动画bounce和overshoot效果"><span class="nav-number"></span> <span class="nav-text">使用脚本表达式制作Mg动画bounce和overshoot效果</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">致清</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="200" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://Assam.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://wensky.xyz/MG动画学习笔记/";
+    this.page.identifier = "MG动画学习笔记/";
+    this.page.title = 'MG动画学习笔记';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://Assam.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
